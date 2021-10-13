@@ -8,5 +8,9 @@
     "id": null,
     "nombre": "Juan",
     "email": "javiercastroloureiro@gmail.com"
+  },
+  {
+    "nombre": "Lucas",
+    "email": ""
   }
 ]

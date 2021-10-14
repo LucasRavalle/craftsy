@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "nombre": "Lucas Fernando",
+    "email": "ravallelucas@gmail.com",
+    "contraseña": "12345678",
+    "pais": "Argentina"
+  }
+]

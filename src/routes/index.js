@@ -1,17 +1,16 @@
 var express = require('express');
 var router = express.Router();
 const{index} = require('../controllers/indexController')
-
-const userRegistered = require ('../middlewares/userRegistered.js')
+const authUser = require ('../middlewares/authUser')
 
 /* GET home page. */
 router.get('/', index);
 
-router.get('/form', (req,res) => {
-    res.render('user/form')
-})
+// router.get('/form', (req,res) => {
+//    res.render('user/form')
+//}) 
 
-router.get('/products', userRegistered, (req, res) => {
+router.get('/products', authUser, (req, res) => {
     res.render ('products/products')
 })
 

@@ -57,3 +57,12 @@ form .bttn button {
     padding: 5px 10px;
     border-radius: 10px;
 }
+
+.danger {
+    border-color: red;
+}
+
+.data {
+    border: none
+    border-bottom = 1px solid black;
+}

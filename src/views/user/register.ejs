@@ -13,7 +13,7 @@
 
             <div class='input'>
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
+                <input type="text" name="nombre" class=<%= locals.errors && errors.nombre ? 'danger' : 'data' %>  id="nombre" placeholder="Nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
                 <% if (locals.errors && errors.nombre) { %>
                     <small> <%= errors.nombre.msg %>   </small>
                 <% } %> 
@@ -21,7 +21,7 @@
 
             <div class='input'>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>">
+                <input type="email" name="email" class=<%= locals.errors && errors.email ? 'danger' : 'data' %> id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>">
                 <% if (locals.errors && errors.email) { %>
                     <small> <%= errors.email.msg %>   </small>
                 <% } %>
@@ -29,7 +29,7 @@
 
             <div class='input'>
                 <label for="password1">Contraseña</label>
-                <input type="password" name="password" id="password1" placeholder="Contraseña">
+                <input type="password" name="password" class=<%= locals.errors && errors.password ? 'danger' : 'data' %> id="password1" placeholder="Contraseña">
                 <% if (locals.errors && errors.password) { %>
                     <small> <%= errors.password.msg %>   </small>
                 <% } %> 
@@ -37,12 +37,12 @@
             
             <div class='input'>
                 <label for="password2">Confirmar contraseña</label>
-                <input type="password" name="password2" id="password2" placeholder="Repetir contraseña">
+                <input type="password" name="password2" class=<%= locals.errors && errors.password ? 'danger' : 'data' %> id="password2" placeholder="Repetir contraseña">
             </div>
 
             <div class='input'>
                 <h4>Pais de nacimiento</h4>
-                <select name="pais" id="pais">
+                <select name="pais" class=<%= locals.errors && errors.pais ? 'danger' : 'data' %> id="pais">
                     <option value="" <%= locals.old && old.pais === '' ? 'selected' : null %> hidden >Seleccione su país</option>
                     <option value="Argentina" <%= locals.old && old.pais === 'Argentina' ? 'selected' : null%>>Argentina</option>
                     <option value="Brasil" <%= locals.old && old.pais === 'Brasil' ? 'selected' : null%>>Brasil</option>
